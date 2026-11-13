@@ -30,7 +30,7 @@ jobs:
     if: needs.credentials.outputs.available == 'true'
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         suite: [ storage, identity, network, compute, orchestration ]
     env:
